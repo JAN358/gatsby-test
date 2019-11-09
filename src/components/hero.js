@@ -10,6 +10,8 @@ export default ({ data }) => (
       <h3 className={styles.heroHeadline}>{data.name}</h3>
       <p className={styles.heroTitle}>{data.title}</p>
       <p>{data.shortBio.shortBio}</p>
+      <p>Почта: {data.email}</p>
+      <p>Телефон: {data.phone}</p>
     </div>
   </div>
 )

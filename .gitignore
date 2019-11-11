@@ -65,3 +65,7 @@ typings/
 
 # contentful config file
 .contentful.json
+
+#other
+.DS_Store
+netlify.toml

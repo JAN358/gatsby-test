@@ -6,7 +6,7 @@ import styles from './article-preview.module.css'
 
 export default ({ article }) => (
   <div className={styles.preview}>
-    <Img alt="" sizes={article.heroImage.sizes} />
+    <Img alt={article.title} sizes={article.heroImage.sizes} />
     <h3 className={styles.previewTitle}>
       <Link to={`/blog/${article.slug}`}>{article.title}</Link>
     </h3>

@@ -67,6 +67,8 @@ export const pageQuery = graphql`
           shortBio {
             shortBio
           }
+          email
+          phone
           title
           heroImage: image {
             sizes(

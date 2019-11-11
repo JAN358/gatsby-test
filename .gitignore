@@ -58,7 +58,7 @@ typings/
 .env
 
 # build folder
-#public
+public
 
 # gatsby cache folder
 .cache
@@ -67,4 +67,5 @@ typings/
 .contentful.json
 
 #other
+.DS_Store
 netlify.toml

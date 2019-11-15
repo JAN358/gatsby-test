@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './blog.module.css'
-import InfiniteCarousel from 'react-leaf-carousel'
+//import InfiniteCarousel from 'react-leaf-carousel'
 import ArticlePreview from '../components/article-preview'
 import {Layout, Menu, Icon} from 'antd'
 import 'react-image-gallery/styles/css/image-gallery.css'
@@ -78,40 +78,40 @@ class BlogIndex extends React.Component {
         <Content className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <div className="article-list">
-            <InfiniteCarousel
-            breakpoints={[
-              {
-                breakpoint: 500,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  dots: false,
-                },
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-                },
-              },
-            ]}
-            dots={false}
-            showSides={true}
-            sidesOpacity={.5}
-            sideSize={.1}
-            slidesToScroll={2}
-            slidesToShow={2}
-            scrollOnDevice={true}
-          >
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              )
-            })}
-          </InfiniteCarousel>
+//            <InfiniteCarousel
+//            breakpoints={[
+//              {
+//                breakpoint: 500,
+//                settings: {
+//                  slidesToShow: 1,
+//                  slidesToScroll: 1,
+//                  dots: false,
+//                },
+//              },
+//              {
+//                breakpoint: 768,
+//                settings: {
+//                  slidesToShow: 2,
+//                  slidesToScroll: 2,
+//                },
+//              },
+//            ]}
+//            dots={false}
+//            showSides={true}
+//            sidesOpacity={.5}
+//            sideSize={.1}
+//            slidesToScroll={2}
+//            slidesToShow={2}
+//            scrollOnDevice={true}
+//          >
+//            {posts.map(({ node }) => {
+//              return (
+//                <li key={node.slug}>
+//                  <ArticlePreview article={node} />
+//                </li>
+//              )
+//            })}
+//          </InfiniteCarousel>
         </div>
         </Content>
         </Layout>

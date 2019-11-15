@@ -1,22 +1,44 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
-
+import ImageGallery from 'react-image-gallery';
+import {Layout, Breadcrumb} from 'antd'
 import heroStyles from '../components/hero.module.css'
+
+const { Content, Sider } = Layout;
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const url = post.heroImage.sizes.src
+    const images = [
+      {
+        original: url,
+        thumbnail: url,
+      },
+      {
+        original: url,
+        thumbnail: url,
+      },
+      {
+        original: url,
+        thumbnail: url,
+      },
+    ];
 
     return (
-      <div style={{ background: '#fff' }}>
+      <Layout style={{ background: '#fff' }}>
         <Helmet title={`${post.title} | ${siteTitle}`} />
         <div className={heroStyles.hero}>
-          <Img className={heroStyles.heroImage} alt={post.title} sizes={post.heroImage.sizes} />
+          <ImageGallery className={heroStyles.heroImage} items={images} />
         </div>
-        <div className="wrapper">
+        <Content className="wrapper">
+          <Breadcrumb style={{ margin: '16px 0' }}>
+            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>List</Breadcrumb.Item>
+            <Breadcrumb.Item>App</Breadcrumb.Item>
+          </Breadcrumb>
           <h1 className="section-headline">{post.title}</h1>
           <p
             style={{
@@ -30,8 +52,8 @@ class BlogPostTemplate extends React.Component {
               __html: post.body.childMarkdownRemark.html,
             }}
           />
-        </div>
-      </div>
+        </Content>
+      </Layout>
     )
   }
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Hero from '../components/hero'
+import Img from 'gatsby-image'
+import {Row} from 'antd'
 import ArticlePreview from '../components/article-preview'
 
 class RootIndex extends React.Component {
@@ -14,8 +16,8 @@ class RootIndex extends React.Component {
       <div style={{ background: '#fff' }}>
         <Helmet title={siteTitle} />
         <Hero data={author.node} />
-        <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
+        <Row className="wrapper">
+          <h2 className="section-headline">Статьи</h2>
           <ul className="article-list">
             {posts.map(({ node }) => {
               return (
@@ -25,7 +27,7 @@ class RootIndex extends React.Component {
               )
             })}
           </ul>
-        </div>
+        </Row>
       </div>
     )
   }

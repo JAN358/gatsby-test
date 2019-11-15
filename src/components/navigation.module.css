@@ -18,3 +18,14 @@
 .navigationItem a {
   color: currentColor;
 }
+
+.headerRow{
+  background-color: #ffffff;
+  margin: 0;
+}
+.headerRightPanal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66px;
+}

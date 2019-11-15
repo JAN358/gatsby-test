@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import base from './base.css'
 import Container from '../components/container'
-import Navigation from '../components/navigation'
+import Header from "../components/header"
+import Footer from "../components/footer"
 
 class Template extends React.Component {
   render() {
@@ -16,8 +17,9 @@ class Template extends React.Component {
 
     return (
       <Container>
-        <Navigation />
+        <Header />
         {children()}
+        <Footer />
       </Container>
     )
   }

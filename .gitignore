@@ -69,3 +69,4 @@ public
 #other
 .DS_Store
 netlify.toml
+yarn.lock
